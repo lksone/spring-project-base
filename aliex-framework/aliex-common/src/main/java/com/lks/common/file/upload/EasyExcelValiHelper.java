@@ -17,6 +17,9 @@ public class EasyExcelValiHelper {
 
     private EasyExcelValiHelper(){}
 
+    /**
+     * Validation validate
+     */
     private static Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
 
     public static <T> String validateEntity(T obj) throws NoSuchFieldException {

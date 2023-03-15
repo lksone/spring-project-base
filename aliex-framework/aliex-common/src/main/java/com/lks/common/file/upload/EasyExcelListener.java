@@ -22,19 +22,19 @@ public class EasyExcelListener<T> extends AnalysisEventListener<T> {
     /**
      * 成功结果集
      */
-    private List<T> successList = new ArrayList<>();
+    private List<T> successList = new LinkedList<>();
 
     /**
      * 失败结果集
      */
-    private List<ExcelCheckErrDto<T>> errList = new ArrayList<>();
+    private List<ExcelCheckErrDto<T>> errList = new LinkedList<>();
 
     /**
      * 处理逻辑service
      */
     private ExcelCheckManager<T> excelCheckManager;
 
-    private List<T> list = new ArrayList<>();
+    private List<T> list = new LinkedList<>();
 
     /**
      * excel对象的反射类
