@@ -11,15 +11,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author lks
+ */
 @Configuration
 public class WebMvcInterceptorConfig extends WebMvcConfigurationSupport {
 
     /**
-     * @title:
-     * @projectName
-     * @description: fastjson处理返回结果
-     * @author zhy
-     * @date 2019/9/5 11:32
+     * fastjson处理返回结果
+     *
+     * @param converters
      */
     @SuppressWarnings("deprecation")
     @Override

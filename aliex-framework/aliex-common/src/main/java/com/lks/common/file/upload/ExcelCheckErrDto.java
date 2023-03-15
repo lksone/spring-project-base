@@ -3,6 +3,9 @@ package com.lks.common.file.upload;
 import lombok.Data;
 
 
+/**
+ * @author lks
+ */
 @Data
 public class ExcelCheckErrDto<T> {
 

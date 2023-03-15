@@ -25,7 +25,6 @@ public class FileServiceImpl implements FileService {
 
     /**
      * @param userExcelDtos 用户信息
-     * @return com.cec.moutai.common.easyexcel.ExcelCheckResult
      * @throws
      * @description: 校验方法
      * @author zhy

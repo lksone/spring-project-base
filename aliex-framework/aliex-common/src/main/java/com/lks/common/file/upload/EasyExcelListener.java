@@ -12,6 +12,9 @@ import java.lang.reflect.Field;
 import java.util.*;
 
 
+/**
+ * @author lks
+ */
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class EasyExcelListener<T> extends AnalysisEventListener<T> {

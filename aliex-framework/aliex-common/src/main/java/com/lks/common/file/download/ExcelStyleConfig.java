@@ -13,6 +13,9 @@ import org.springframework.util.CollectionUtils;
 import java.util.List;
 
 
+/**
+ * @author lks
+ */
 @Slf4j
 public class ExcelStyleConfig implements CellWriteHandler {
 
@@ -60,7 +63,7 @@ public class ExcelStyleConfig implements CellWriteHandler {
         }
         if (!CollectionUtils.isEmpty(columnList) && columnList.contains(cell.getColumnIndex())) {
             // 设置表单保护密码
-            writeSheetHolder.getSheet().protectSheet("seliplace-password");
+            writeSheetHolder.getSheet().protectSheet("123456789a");
             // 设置锁定单元格
             cellStyle.setLocked(true);
         }
