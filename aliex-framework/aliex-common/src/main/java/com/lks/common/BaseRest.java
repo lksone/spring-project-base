@@ -3,7 +3,6 @@ package com.lks.common;
 public class BaseRest {
 
 
-
     public Result addSucResult() {
         return this.addResult(true, ResultCodeEnum.SUCCESS.getValue(), ResultCodeEnum.SUCCESS.getLabel(), (Object)null);
     }

@@ -3,6 +3,7 @@ package com.lks.common;
 
 /**
  * 返回类枚举
+ * @author lks
  */
 public enum ResultCodeEnum {
 

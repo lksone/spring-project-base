@@ -2,13 +2,7 @@ package com.lks.common.file.upload;
 
 import java.util.regex.Pattern;
 
-/**
- * @author zhy
- * @title: ExcelPatternMsg
- * @projectName cec-moutai-bd-display
- * @description: excel正则表达式，以及错误信息
- * @date 2019/12/2614:22
- */
+
 public class ExcelPatternMsg {
 
     /**
