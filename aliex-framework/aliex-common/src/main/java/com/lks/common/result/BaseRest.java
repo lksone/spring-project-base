@@ -1,4 +1,4 @@
-package com.lks.common;
+package com.lks.common.result;
 
 public class BaseRest {
 

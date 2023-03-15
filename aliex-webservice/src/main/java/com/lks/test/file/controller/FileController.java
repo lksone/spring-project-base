@@ -3,8 +3,8 @@ package com.lks.test.file.controller;
 
 import com.alibaba.excel.EasyExcelFactory;
 import com.alibaba.fastjson.JSON;
-import com.lks.common.BaseRest;
-import com.lks.common.Result;
+import com.lks.common.result.BaseRest;
+import com.lks.common.result.Result;
 import com.lks.common.file.upload.EasyExcelListener;
 import com.lks.common.file.upload.EasyExcelUtils;
 import com.lks.common.file.upload.ExcelCheckErrDto;
@@ -13,7 +13,6 @@ import com.lks.test.file.dto.UserExcelDto;
 import com.lks.test.file.dto.UserExcelErrDto;
 import com.lks.test.file.service.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
