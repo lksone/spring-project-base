@@ -6,12 +6,7 @@ import org.apache.commons.lang3.ObjectUtils;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
-/**
- * @author liuhaiyang
- * @version V1.0
- * easyExcel参数类
- * @date 2019/10/14 10:15
- */
+
 @Setter
 @Getter
 @ToString

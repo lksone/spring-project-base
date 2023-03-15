@@ -2,6 +2,9 @@ package com.lks.common;
 
 import lombok.Data;
 
+/**
+ * @author lks
+ */
 @Data
 public class Result <T>{
 

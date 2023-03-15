@@ -12,12 +12,7 @@ import org.springframework.util.CollectionUtils;
 
 import java.util.List;
 
-/**
- * @author liuhaiyang
- * @version V1.0
- * 设置Excel样式配置
- * @date 2019/11/26 10:06
- */
+
 @Slf4j
 public class ExcelStyleConfig implements CellWriteHandler {
 
