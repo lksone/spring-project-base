@@ -11,15 +11,22 @@ import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.List;
 
+
+/**
+ * Excel导入和导出，将文件写入到流数据中
+ *
+ * @author lks
+ */
 public class EasyExcelUtils {
 
-    private EasyExcelUtils(){}
+    private EasyExcelUtils() {
+    }
 
 
     @SuppressWarnings("rawtypes")
     public static void webWriteExcel(HttpServletResponse response, List objects, Class clazz, String fileName) throws IOException {
         String sheetName = fileName;
-        webWriteExcel(response,objects,clazz,fileName,sheetName);
+        webWriteExcel(response, objects, clazz, fileName, sheetName);
     }
 
 
@@ -28,6 +35,7 @@ public class EasyExcelUtils {
         response.setContentType("application/vnd.ms-excel");
         response.setCharacterEncoding("utf-8");
         fileName = URLEncoder.encode(fileName, "UTF-8");
+        //设置文件下载乱码的问题
         response.setHeader("Content-disposition", "attachment;filename*=utf-8'zh_cn'" + fileName + ".xlsx");
         // 头的策略
         WriteCellStyle headWriteCellStyle = new WriteCellStyle();
@@ -39,9 +47,9 @@ public class EasyExcelUtils {
         ServletOutputStream outputStream = response.getOutputStream();
         try {
             EasyExcelFactory.write(outputStream, clazz).registerWriteHandler(horizontalCellStyleStrategy).sheet(sheetName).doWrite(objects);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             outputStream.close();
         }
     }

@@ -1,0 +1,5 @@
+spring:
+  servlet:
+    multipart:
+      #设置临时文件夹，防止tomcat启动后文件上传，会出现自动删除临时文件夹的问题
+      location: /temp/spring-project-base/storage/directory

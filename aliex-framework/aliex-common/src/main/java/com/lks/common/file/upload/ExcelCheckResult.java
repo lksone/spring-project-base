@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ * @author lks
+ */
 @Data
 public class ExcelCheckResult<T> {
     private List<T> successDtos;

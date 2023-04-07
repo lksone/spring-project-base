@@ -6,6 +6,11 @@ import com.alibaba.excel.annotation.write.style.ColumnWidth;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+
+/**
+ * 错误数据集合对象
+ * @author lks
+ */
 @Data
 @EqualsAndHashCode(callSuper=false)
 public class UserExcelErrDto extends UserExcelDto {

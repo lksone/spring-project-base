@@ -4,6 +4,8 @@ import lombok.Data;
 
 
 /**
+ * excel校验报错对象
+ *
  * @author lks
  */
 @Data
@@ -13,9 +15,10 @@ public class ExcelCheckErrDto<T> {
 
     private String errMsg;
 
-    public ExcelCheckErrDto(){}
+    public ExcelCheckErrDto() {
+    }
 
-    public ExcelCheckErrDto(T t, String errMsg){
+    public ExcelCheckErrDto(T t, String errMsg) {
         this.t = t;
         this.errMsg = errMsg;
     }

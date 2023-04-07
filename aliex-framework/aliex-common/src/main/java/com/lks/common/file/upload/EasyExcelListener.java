@@ -55,7 +55,7 @@ public class EasyExcelListener<T> extends AnalysisEventListener<T> {
         String errMsg;
         try {
             //根据excel数据实体中的javax.validation + 正则表达式来校验excel数据
-            errMsg = EasyExcelValiHelper.validateEntity(t);
+            errMsg = EasyExcelValidHelper.validateEntity(t);
         } catch (NoSuchFieldException e) {
             errMsg = "解析数据出错";
             e.printStackTrace();
@@ -91,7 +91,7 @@ public class EasyExcelListener<T> extends AnalysisEventListener<T> {
 
 
     /**
-     * 文件头校验
+     * 文件头进行数据校验
      *
      * @param headMap
      * @param context

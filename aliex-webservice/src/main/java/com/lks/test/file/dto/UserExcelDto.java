@@ -12,8 +12,8 @@ import java.io.Serializable;
 
 @Data
 public class UserExcelDto implements Serializable {
-    private static final long serialVersionUID = 1423468264463048374L;
 
+    private static final long serialVersionUID = 1423468264463048374L;
 
     /**
      * 名称
@@ -44,6 +44,7 @@ public class UserExcelDto implements Serializable {
      * 生日
      */
     @ExcelProperty(index = 3,value = "生日")
+    @ColumnWidth(50)
     @Pattern(regexp = ExcelPatternMsg.DATE_TIME1,message = ExcelPatternMsg.DATE_TIME1_MSG)
     private String birthday;
 }

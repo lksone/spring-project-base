@@ -11,11 +11,12 @@ import java.util.Set;
 
 
 /**
- * @author Administrator
+ * @author lks
  */
-public class EasyExcelValiHelper {
+public class EasyExcelValidHelper {
 
-    private EasyExcelValiHelper(){}
+    private EasyExcelValidHelper() {
+    }
 
     /**
      * Validation validate
@@ -30,7 +31,7 @@ public class EasyExcelValiHelper {
                 Field declaredField = obj.getClass().getDeclaredField(cv.getPropertyPath().toString());
                 ExcelProperty annotation = declaredField.getAnnotation(ExcelProperty.class);
                 //拼接错误信息，包含当前出错数据的标题名字+错误信息
-                result.append(annotation.value()[0]+cv.getMessage()).append(";");
+                result.append(annotation.value()[0] + cv.getMessage()).append(";");
             }
         }
         return result.toString();

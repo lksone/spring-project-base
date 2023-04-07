@@ -3,6 +3,9 @@ package com.lks.common.file.upload;
 import java.util.List;
 
 
+/**
+ * @author lks
+ */
 public interface ExcelCheckManager<T> {
 
     /**

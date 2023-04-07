@@ -8,6 +8,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 
+/**
+ * @author lks
+ */
 @Data
 public class User implements Serializable {
 
