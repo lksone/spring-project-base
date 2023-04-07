@@ -5,7 +5,6 @@ import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.support.ExcelTypeEnum;
 import com.alibaba.excel.write.metadata.WriteSheet;
 import com.google.common.collect.Lists;
-import com.lks.common.file.cellmerage.CustomMergeStrategy;
 import com.lks.test.file.dto.DemoData;
 import lombok.extern.slf4j.Slf4j;
 
@@ -94,6 +93,6 @@ public class Demo {
         //不合并数据信息
        // writeExcel();
         List<DemoData> demoDataList = data1();
-        List<String> collect = demoDataList.stream().map(DemoData::getName).collect(Collectors.toList());
+        demoDataList.stream().map(DemoData::getName).collect(Collectors.toList());
     }
 }
