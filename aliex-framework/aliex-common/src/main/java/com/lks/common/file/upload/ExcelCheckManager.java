@@ -9,7 +9,8 @@ import java.util.List;
 public interface ExcelCheckManager<T> {
 
     /**
-     * @description: 校验方法
+     * 校验方法
+     *
      * @param objects
      * @throws
      * @return com.cec.moutai.common.easyexcel.ExcelCheckResult

@@ -4,7 +4,6 @@ import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.support.ExcelTypeEnum;
 import com.alibaba.excel.util.Validate;
 import com.alibaba.excel.write.builder.ExcelWriterBuilder;
-import com.alibaba.excel.write.merge.OnceAbsoluteMergeStrategy;
 import com.alibaba.excel.write.metadata.WriteSheet;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
