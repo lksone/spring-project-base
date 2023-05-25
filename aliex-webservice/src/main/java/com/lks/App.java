@@ -13,13 +13,11 @@ import org.springframework.core.env.ConfigurableEnvironment;
  * @author Administrator
  */
 @Slf4j
-@SpringBootApplication(exclude= {DataSourceAutoConfiguration.class})
-public class App 
-{
-    public static void main( String[] args )
-    {
-        ConfigurableApplicationContext run = SpringApplication.run(App.class,args);
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+public class App {
+    public static void main(String[] args) {
+        ConfigurableApplicationContext run = SpringApplication.run(App.class, args);
         ConfigurableEnvironment environment = run.getEnvironment();
-        log.info("项目启动成功：env={},",environment.getProperty("system.os"));
+        log.info("项目启动成功：env={},", environment.getProperty("system.os"));
     }
 }

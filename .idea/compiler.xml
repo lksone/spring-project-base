@@ -10,5 +10,12 @@
         <module name="aliex-common" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="aliex-common" target="1.8" />
+      <module name="aliex-dependencies" target="1.5" />
+      <module name="aliex-framework" target="1.5" />
+      <module name="aliex-webservice" target="1.8" />
+      <module name="spring-project-base" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

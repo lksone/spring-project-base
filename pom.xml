@@ -6,11 +6,10 @@
 
 
     <groupId>com.lks</groupId>
-    <artifactId>spring-project-base</artifactId>
+    <artifactId>aliex-project-base</artifactId>
     <version>1.0.0</version>
-    <name>spring-project-base</name>
+    <name>aliex-project-base</name>
     <packaging>pom</packaging>
-
 
     <modules>
         <module>aliex-framework</module>
@@ -19,7 +18,7 @@
     </modules>
 
     <properties>
-      <project.version>1.0.0</project.version>
+        <project.version>1.0.0</project.version>
     </properties>
 
     <dependencyManagement>
