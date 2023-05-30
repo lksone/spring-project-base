@@ -15,6 +15,7 @@
         <module>aliex-framework</module>
         <module>aliex-webservice</module>
         <module>aliex-dependencies</module>
+        <module>aliex-netty</module>
     </modules>
 
     <properties>
