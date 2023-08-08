@@ -67,7 +67,7 @@ public class Server {
         /**
          * 第4步绑定8080端口
          */
-        ChannelFuture future = server.bind(8080).sync();
+        ChannelFuture future = server.bind(8081).sync();
         /**
          * 当通道关闭了，就继续往下走
          */

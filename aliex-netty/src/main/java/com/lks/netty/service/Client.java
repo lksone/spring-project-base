@@ -54,7 +54,7 @@ public class Client {
         });
 
         //连接服务器
-        ChannelFuture future = client.connect("localhost", 8080).sync();
+        ChannelFuture future = client.connect("localhost", 8081).sync();
 
         //发送数据给服务器
         User user = new User();
