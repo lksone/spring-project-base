@@ -1,4 +1,4 @@
-package com.lks.netty.io.buffer;
+package com.lks.netty.other.io.buffer;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

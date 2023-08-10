@@ -1,4 +1,4 @@
-package com.lks.netty.service;
+package com.lks.netty.other.service;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

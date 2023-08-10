@@ -1,4 +1,4 @@
-package com.lks.netty.service;
+package com.lks.netty.other.service;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;

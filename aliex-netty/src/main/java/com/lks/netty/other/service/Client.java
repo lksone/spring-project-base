@@ -1,7 +1,7 @@
-package com.lks.netty.service;
+package com.lks.netty.other.service;
 
 import com.alibaba.fastjson2.JSONObject;
-import com.lks.netty.dto.User;
+import com.lks.netty.other.dto.User;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;

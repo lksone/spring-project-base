@@ -1,6 +1,6 @@
-package com.lks.netty.io.nio;
+package com.lks.netty.other.io.nio;
 
-import com.lks.netty.io.utils.ByteBufferUtil;
+import com.lks.netty.other.io.utils.ByteBufferUtil;
 
 import java.nio.ByteBuffer;
 

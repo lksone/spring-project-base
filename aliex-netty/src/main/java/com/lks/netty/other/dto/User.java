@@ -1,4 +1,4 @@
-package com.lks.netty.dto;
+package com.lks.netty.other.dto;
 
 /**
  * @author lks

@@ -1,8 +1,8 @@
-package com.lks.netty.service;
+package com.lks.netty.other.service;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelInboundHandlerAdapter;
+import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.util.AttributeKey;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,7 +15,7 @@ import java.nio.charset.Charset;
  * @e-mail 1056224715@qq.com
  * @date 2023/5/29 10:31
  */
-public class SimpleClientHandler extends ChannelInboundHandlerAdapter {
+public class SimpleClientHandler extends SimpleChannelInboundHandler {
     private final static Logger log = LogManager.getLogger(SimpleClientHandler.class);
 
     @Override
@@ -30,5 +30,10 @@ public class SimpleClientHandler extends ChannelInboundHandlerAdapter {
 
         //把客户端的通道关闭
         ctx.channel().close();
+    }
+
+    @Override
+    protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
+        log.info("這裡沒有執行為什麼");
     }
 }
