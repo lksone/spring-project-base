@@ -46,4 +46,14 @@ public class ThreadPool {
     }
 
 
+    /**
+     * 执行
+     *
+     * @param runnable
+     */
+    public void execute(Runnable runnable) {
+        threadPoolExecutor.execute(runnable);
+    }
+
+
 }
