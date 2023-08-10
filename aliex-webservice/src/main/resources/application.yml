@@ -1,3 +1,5 @@
+server:
+  port: 9998
 spring:
   servlet:
     multipart:
