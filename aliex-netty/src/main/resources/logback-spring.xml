@@ -2,7 +2,7 @@
 <configuration>
    
      <!--彩色日志输出格式-->
-    <property name="CONSOLE_LOG_PATTERN" value="[%d{yyyy-MM-dd HH:mm:ss}] [%thread] [%p] [%class:%line] %msg%n"/>
+    <property name="CONSOLE_LOG_PATTERN" value="[%d{yyyy-MM-dd HH:mm:ss}] [%thread] [%p] [%class:%line] %green(%msg%n)"/>
     <!--非彩色日志输出格式-->
     <property name="PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n" />
  
@@ -10,6 +10,8 @@
     <property name="DEV_FILE_PATH" value="d:/opt/DYSJ/printJava/tomcat/logs" />
     <!-- pro文件路径 -->
     <property name="PRO_FILE_PATH" value="d:/opt/DYSJ/printJava/tomcat/logs" />
+
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
  
     <!--控制台输出-->
     <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
@@ -54,8 +56,8 @@ l
         <!-- root日志以INFO级别输出，指定日志信息输出到哪个地方-->
         <root level="INFO">
             <appender-ref ref="consoleAppender" />
-            <appender-ref ref="fileAppender" />
-            <appender-ref ref="errorAppender" />
+           <!-- <appender-ref ref="fileAppender" />
+            <appender-ref ref="errorAppender" />-->
         </root>
   <!--  </springProfile>-->
 </configuration>

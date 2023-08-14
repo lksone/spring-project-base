@@ -10,7 +10,7 @@ import java.nio.channels.FileChannel;
  *
  * buffer的使用
  * @author lks
- * @description todo
+ * @description Buffer的數據演示
  * @e-mail 1056224715@qq.com
  * @date 2023/6/27 23:30
  */
