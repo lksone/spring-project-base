@@ -1,6 +1,8 @@
 package com.lks.netty.day001.nio.moreSystem;
 
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -13,6 +15,7 @@ import java.util.Iterator;
  * @e-mail 1056224715@qq.com
  * @date 2023/8/12 13:56
  */
+@Slf4j
 public class NioServer {
 
     /**
@@ -44,6 +47,7 @@ public class NioServer {
      */
     public void listen(){
         try {
+            log.info("開始進行監聽狀態--------------------------------------");
             while (selector.select()>0){
                 Iterator<SelectionKey> iterator = selector.selectedKeys().stream().iterator();
                 while (iterator.hasNext()){
@@ -51,6 +55,7 @@ public class NioServer {
                     SelectionKey selectionKey = iterator.next();
                     //
                     if(selectionKey.isAcceptable()){
+                        log.info("進入了acceptable狀態");
                         SocketChannel sChannel = serverSocketChannel.accept();
                         sChannel.configureBlocking(false);
                         System.out.println(sChannel.getRemoteAddress() + "上线");

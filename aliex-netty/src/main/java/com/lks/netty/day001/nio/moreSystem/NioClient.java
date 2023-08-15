@@ -72,7 +72,8 @@ public class NioClient {
     private void sendToServer(String s) {
         s = username + "说:" + s;
         try {
-            socketChannel.write(ByteBuffer.wrap(s.getBytes()));
+            ByteBuffer wrap = ByteBuffer.wrap(s.getBytes());
+            socketChannel.write(wrap);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -80,6 +81,7 @@ public class NioClient {
 
     public static void main(String[] args) {
         NioClient client = new NioClient();
+        //1、讀取服務器發送過來的消息
         new Thread(() -> {
             try {
                 client.readInfo();
@@ -87,6 +89,7 @@ public class NioClient {
                 e.printStackTrace();
             }
         }).start();
+        //我自己發送的消息
         Scanner sc = new Scanner(System.in);
         while (sc.hasNextLine()) {
             String s = sc.nextLine();
