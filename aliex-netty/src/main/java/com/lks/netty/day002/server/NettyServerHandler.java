@@ -111,6 +111,7 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        log.info("----------------------exceptionCaught-----------------------------------");
         //在发生异常时主动关掉连接
         ctx.close();
         log.error("发现异常：\r\n" + cause.getMessage());
