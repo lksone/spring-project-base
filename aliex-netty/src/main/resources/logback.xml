@@ -2,7 +2,8 @@
 <configuration>
    
      <!--彩色日志输出格式-->
-    <property name="CONSOLE_LOG_PATTERN" value="[%d{yyyy-MM-dd HH:mm:ss}] [%thread] [%p] [%class:%line] %green(%msg%n)"/>
+    <property name="CONSOLE_LOG_PATTERN" value="[%d{yyyy-MM-dd HH:mm:ss}] [%thread] %green([%p]) [%class:%line] %green(%msg%n)"/>
+
     <!--非彩色日志输出格式-->
     <property name="PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n" />
  
@@ -11,6 +12,7 @@
     <!-- pro文件路径 -->
     <property name="PRO_FILE_PATH" value="d:/opt/DYSJ/printJava/tomcat/logs" />
 
+    <!--這裡的只能夠用於logback-spring-->
     <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
  
     <!--控制台输出-->
