@@ -3,7 +3,6 @@ package com.lks.common.dataDesensitization;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
-import com.lks.common.dataDesensitization.pojo.Person;
 
 import java.io.IOException;
 
