@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="jquery-1.7.2.min.js"></script>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 </head>
 <body>
@@ -21,12 +21,14 @@
 </div>
 </body>
 <script type="text/javascript">
+    debugger
     var status = 0;
     var page = {
         init: function(){
             $("#startBtn").click($.proxy(this.upload, this));
         },
         upload: function(){
+            debugger
             status = 0;
             var GUID = this.guid();
             var file = $("#file")[0].files[0],  //文件对象
@@ -43,6 +45,7 @@
             }
         },
         partUpload:function(GUID,partFile,name,chunks,chunk){
+            debugger
             //构造一个表单，FormData是HTML5新增的
             var  now = this;
             var form = new FormData();
@@ -53,7 +56,7 @@
             form.append("chunk", chunk);        //当前是第几片
             //Ajax提交
             $.ajax({
-                url: "http://127.0.0.1:80/file/upload/part",
+                url: "http://127.0.0.1:8080/file/upload/part",
                 type: "POST",
                 data: form,
                 async: true,        //异步
@@ -71,11 +74,12 @@
             });
         },
         mergeFile:function(GUID,name){
+            debugger
             var formMerge = new FormData();
             formMerge.append("guid", GUID);
             formMerge.append("fileName", name);
             $.ajax({
-                url: "http://127.0.0.1:80/file/upload/merge",
+                url: "http://127.0.0.1:8080/file/upload/merge",
                 type: "POST",
                 data: formMerge,
                 processData: false,  //很重要，告诉jquery不要对form进行处理
@@ -88,6 +92,7 @@
             });
         },
         guid:function(prefix){
+            debugger
             var counter = 0;
             var guid = (+new Date()).toString( 32 ),
                 i = 0;

@@ -1,12 +1,15 @@
 server:
   port: 9998
+  tomcat:
+    max-swallow-size: 100MB
 spring:
   servlet:
     multipart:
       #      最大请求内存
-      max-request-size: 8000MB
+      max-request-size: 10MB
       #      最大的文件内存
-      max-file-size: 8000MB
+      max-file-size: 10MB
+      resolve-lazily: true
       #      file-size-threshold: 100MB
       #设置临时文件夹，防止tomcat启动后文件上传，会出现自动删除临时文件夹的问题
       location: /temp/spring-project-base/storage/directory
