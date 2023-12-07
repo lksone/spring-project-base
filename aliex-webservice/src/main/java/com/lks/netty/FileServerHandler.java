@@ -10,29 +10,30 @@ import java.io.RandomAccessFile;
 
 /**
  * @author lks
- * @description todo
+ * @description 输入文件地址
  * @e-mail 1056224715@qq.com
  * @date 2023/12/4 17:47
  */
 public class FileServerHandler extends SimpleChannelInboundHandler<String> {
 
-    private static final String CR=System.getProperty("line.separator");
+    private static final String CR = System.getProperty("line.separator");
+
     @Override
     protected void messageReceived(ChannelHandlerContext context, String s) throws Exception {
         //通过路径来构造文件
-        File file=new File(s);
+        File file = new File(s);
         //如果文件存在
-        if (file.exists()){
+        if (file.exists()) {
             //如果不是文件，是文件夹
-            if(!file.isFile()){
-                context.writeAndFlush("Not a file : "+file+CR);
+            if (!file.isFile()) {
+                context.writeAndFlush("Not a file : " + file + CR);
                 return;
             }
-            context.write(file+" "+file.length()+CR);
+            context.write(file + " " + file.length() + CR);
             //构造只读文件
-            RandomAccessFile randomAccessFile=new RandomAccessFile(s,"r");
+            RandomAccessFile randomAccessFile = new RandomAccessFile(s, "r");
             //构造netty 的FileRegion对象
-            FileRegion region=new DefaultFileRegion(
+            FileRegion region = new DefaultFileRegion(
                     //FileChannel 文件通道，用于对文件进行读写操作
                     randomAccessFile.getChannel(),
                     //0（Position）文件操作的指针位置，读取或写入的起始点。
@@ -45,14 +46,14 @@ public class FileServerHandler extends SimpleChannelInboundHandler<String> {
             //写入分割符告诉CMD 控制台，文件传输结束
             context.writeAndFlush(CR);
             randomAccessFile.close();
-        }else {
+        } else {
             //文件不存在
-            context.writeAndFlush("File not found : "+file+CR);
+            context.writeAndFlush("File not found : " + file + CR);
         }
     }
 
     @Override
-    public void exceptionCaught(ChannelHandlerContext context, Throwable cause){
+    public void exceptionCaught(ChannelHandlerContext context, Throwable cause) {
         cause.printStackTrace();
         context.close();
     }
