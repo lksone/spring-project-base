@@ -2,6 +2,8 @@ package com.lks.scheduler.service;
 
 import com.lks.scheduler.entity.CronJob;
 
+import java.util.List;
+
 /**
  * @author lks
  * @description 定时任务的处理逻辑
@@ -42,4 +44,12 @@ public interface CronTaskService {
      * @return
      */
     boolean controlCronTask(CronJob cronJob);
+
+
+    /**
+     * 查询获取所有的任务信息
+     *
+     * @return
+     */
+    List<CronJob> findCronTaskList();
 }

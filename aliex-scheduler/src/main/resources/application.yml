@@ -17,7 +17,7 @@ spring:
       location: /temp/spring-project-base/storage/directory
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/ztjk-xw?characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/aliex-base?characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=false
     username: root
     password: 12345678
     testOnBorrow: true

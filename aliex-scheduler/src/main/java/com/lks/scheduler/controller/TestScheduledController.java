@@ -1,7 +1,10 @@
 package com.lks.scheduler.controller;
 
+import com.lks.scheduler.entity.CronJob;
 import com.lks.scheduler.register.CronTaskRegistrar;
+import com.lks.scheduler.service.CronTaskService;
 import com.lks.scheduler.thread.CronTaskRunnable;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -18,8 +21,8 @@ import java.util.Map;
 @RequestMapping("/scheduled")
 public class TestScheduledController {
 
-    @Resource
-    private CronTaskRegistrar cronTaskRegistrar;
+    @Autowired
+    private CronTaskService cronTaskService;
 
     /**
      * 获取任务列表
@@ -29,8 +32,8 @@ public class TestScheduledController {
      * @since 2023/4/21 0021
      **/
     @GetMapping
-    public List<CronTaskRunnable> getScheduledTasks() {
-        return cronTaskRegistrar.getScheduledTasks();
+    public List<CronJob> getScheduledTasks() {
+        return cronTaskService.findCronTaskList();
     }
 
     /**
@@ -42,16 +45,9 @@ public class TestScheduledController {
      * @since 2023/4/21 0021
      **/
     @PostMapping
-    public String addCronTask(@RequestBody Map<String, Object> param) {
+    public String addCronTask(@RequestBody CronJob CronJob) {
         //自己拿任务参数的逻辑：可以把每个任务保存到数据库，重新启动任务的同时，加载这些任务到任务调度中心
-        String taskId = (String) param.get("taskId");
-        Integer taskType = (Integer) param.get("taskType");
-        String taskName = (String) param.get("taskName");
-        Object params = param.get("params");
-        //添加任务参数
-      //  CronTaskRunnable task = new CronTaskRunnable(taskId, taskType, taskName, params);
-        //注册任务：cron表达式，可以从传入不一样的
-      //  cronTaskRegistrar.addCronTask(task, "0/5 * * * * ?");
+        cronTaskService.addCronTask(CronJob);
         return "ok";
     }
 
@@ -65,7 +61,9 @@ public class TestScheduledController {
      **/
     @DeleteMapping
     public String removeCronTaskByTaskId(@RequestParam String taskId) {
-        cronTaskRegistrar.removeCronTaskByTaskId(taskId);
+        CronJob cronJob = new CronJob();
+        cronJob.setJobId(taskId);
+        cronTaskService.deleteCronTask(cronJob);
         return "ok";
     }
 
@@ -78,7 +76,6 @@ public class TestScheduledController {
      **/
     @DeleteMapping("/removeAll")
     public String removeCronTask() {
-        cronTaskRegistrar.destroy();
         return "ok";
     }
 
