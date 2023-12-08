@@ -16,7 +16,7 @@
         <module>aliex-webservice</module>
         <module>aliex-dependencies</module>
         <module>aliex-netty</module>
-        <module>aliex-demo</module>
+        <module>aliex-scheduler</module>
     </modules>
 
     <properties>

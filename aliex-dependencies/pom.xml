@@ -70,16 +70,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- 统一依赖管理 -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring.boot.version}</version>
-                <type>pom</type>
-                <scope>provided</scope>
-            </dependency>
-
-
             <!-- Spring 核心 -->
             <dependency>
                 <!-- 用于生成自定义的 Spring @ConfigurationProperties 配置类的说明文件 -->
@@ -97,8 +87,14 @@
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-jdbc</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-redis</artifactId>
-                <version>2.4.4</version>
+                <version>${spring.boot.version}</version>
             </dependency>
 
             <!--springboot-->
