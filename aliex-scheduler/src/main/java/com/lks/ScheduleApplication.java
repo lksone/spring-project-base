@@ -8,7 +8,6 @@ import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-import java.util.Map;
 import java.util.Properties;
 
 
