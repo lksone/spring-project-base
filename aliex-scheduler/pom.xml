@@ -6,6 +6,7 @@
     <groupId>com.lks</groupId>
     <artifactId>aliex-scheduler</artifactId>
     <version>1.0.0</version>
+    <packaging>war</packaging>
     <name>aliex-scheduler</name>
 
     <properties>
