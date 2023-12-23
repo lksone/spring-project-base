@@ -3,6 +3,7 @@ package com.lks.scheduler.repo;
 import com.lks.scheduler.entity.CronJob;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
@@ -20,6 +21,6 @@ public interface CronJobRepo extends JpaRepository<CronJob, String> {
      * @param normal
      * @return
      */
-    @Query("select jt from com.lks.scheduler.repo.CronJob jt where jt.jobStatus=:normal")
-    List<CronJob> getSysJobListByStatus(Integer normal);
+    @Query("select jt from com.lks.scheduler.entity.CronJob jt where jt.jobStatus=:normal")
+    List<CronJob> getSysJobListByStatus(@Param("normal") Integer normal);
 }

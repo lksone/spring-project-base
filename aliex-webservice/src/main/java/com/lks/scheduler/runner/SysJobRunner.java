@@ -5,7 +5,7 @@ import com.lks.scheduler.entity.CronJob;
 import com.lks.scheduler.register.CronTaskRegistrar;
 import com.lks.scheduler.repo.CronJobRepo;
 import com.lks.scheduler.thread.CronTaskRunnable;
-import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.collections4.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

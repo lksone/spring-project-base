@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
@@ -14,9 +15,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @author Administrator
  */
 @Slf4j
+@EnableJpaRepositories
 @EnableScheduling
 @EnableJpaAuditing
-//@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @SpringBootApplication
 public class WebServiceApplication {
     public static void main(String[] args) {
