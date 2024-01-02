@@ -15,7 +15,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @author Administrator
  */
 @Slf4j
-@EnableJpaRepositories
+@EnableJpaRepositories("com.lks.*")
 @EnableScheduling
 @EnableJpaAuditing
 @SpringBootApplication

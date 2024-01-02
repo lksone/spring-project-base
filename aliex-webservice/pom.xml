@@ -38,7 +38,6 @@
                     <artifactId>xml-apis</artifactId>
                 </exclusion>
             </exclusions>
-            <version>2.7.8</version>
         </dependency>
         <!--springboot-->
         <dependency>
