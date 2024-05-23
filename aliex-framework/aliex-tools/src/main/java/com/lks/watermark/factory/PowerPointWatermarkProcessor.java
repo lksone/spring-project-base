@@ -92,8 +92,4 @@ public class PowerPointWatermarkProcessor extends AbstractWatermarkProcessor {
         shape.getAutoShapeLock().setGroupingLocked(true);
     }
 
-
-
-
-
 }

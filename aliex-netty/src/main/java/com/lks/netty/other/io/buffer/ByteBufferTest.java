@@ -104,7 +104,7 @@ public class ByteBufferTest {
     private static void learnTest() {
         // 1.分配一个缓冲区,容量设置成10
         ByteBuffer buffer = ByteBuffer.allocate(10);
-        log.info("\u001B[34m"+"position:{},limit:{}.capacity:{}",buffer.position(),buffer.limit(),buffer.capacity()+ "\u001B[0m");
+        //log.info("\u001B[34m"+"position:{},limit:{}.capacity:{}",buffer.position(),buffer.limit(),buffer.capacity()+ "\u001B[0m");
         System.out.println("--------------------");
     }
 

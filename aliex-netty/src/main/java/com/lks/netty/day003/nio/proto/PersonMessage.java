@@ -1,3 +1,4 @@
+/*
 package com.lks.netty.day003.nio.proto;
 
 import com.google.protobuf.Descriptors;
@@ -5,12 +6,14 @@ import com.google.protobuf.ExtensionRegistry;
 import com.google.protobuf.ExtensionRegistryLite;
 import com.google.protobuf.GeneratedMessageV3;
 
+*/
 /**
  * @author lks
  * @description todo
  * @e-mail 1056224715@qq.com
  * @date 2023/8/15 17:20
- */
+ *//*
+
 public class PersonMessage {
 
     private PersonMessage() {}
@@ -52,3 +55,4 @@ public class PersonMessage {
     }
 
 }
+*/

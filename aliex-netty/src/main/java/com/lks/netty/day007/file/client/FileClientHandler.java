@@ -8,6 +8,7 @@ import com.lks.netty.day007.file.util.FileUtil;
 import com.lks.netty.day007.file.util.MsgUtil;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import lombok.extern.slf4j.Slf4j;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -18,6 +19,7 @@ import java.util.Date;
  * @e-mail 1056224715@qq.com
  * @date 2023/9/18 23:49
  */
+@Slf4j
 public class FileClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override
@@ -49,10 +51,8 @@ public class FileClientHandler extends ChannelInboundHandlerAdapter {
             default:
                 break;
         }
-        /**模拟传输过程中断，场景测试可以注释掉
-         *
-         */
-        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()) + " bugstack虫洞栈客户端传输文件信息[主动断开链接，模拟断点续传]");
+        //模拟传输过程中断，场景测试可以注释掉
+        log.info(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()) + " bugstack虫洞栈客户端传输文件信息[主动断开链接，模拟断点续传]");
         ctx.flush();
         ctx.close();
     }

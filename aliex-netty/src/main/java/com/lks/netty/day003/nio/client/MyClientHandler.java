@@ -1,7 +1,5 @@
 package com.lks.netty.day003.nio.client;
 
-import com.googlecode.protobuf.format.JsonFormat;
-import com.lks.netty.day003.nio.proto.Person;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import lombok.extern.slf4j.Slf4j;
@@ -37,10 +35,10 @@ public class MyClientHandler extends ChannelInboundHandlerAdapter {
      */
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        Person.Builder builder = Person.newBuilder();
+      /*  Person.Builder builder = Person.newBuilder();
         builder.setName("clientlks");
-        builder.setAge(20);
-        ctx.writeAndFlush(builder.build());
+        builder.setAge(20);*/
+       // ctx.writeAndFlush(builder.build());
     }
 
     /**
@@ -63,7 +61,7 @@ public class MyClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         log.info(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())  + "接收到消息：");
-        log.info( JsonFormat.printToString((Person) msg));
+     //   log.info( JsonFormat.printToString((Person) msg));
         super.channelRead(ctx, msg);
     }
 

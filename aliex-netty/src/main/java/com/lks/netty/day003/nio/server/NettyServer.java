@@ -27,9 +27,9 @@ public class NettyServer {
                     //对应JDK NIO类库中的ServerSocketChannel
                     .channel(NioServerSocketChannel.class)
                     //配置NioServerSocketChannel的TCP参数
-                    .option(ChannelOption.SO_BACKLOG, 1024)
+                    .option(ChannelOption.SO_BACKLOG, 1024);
                     //绑定I/O的事件处理类
-                    .childHandler(new MyServerChannelInitializer());
+                  //  .childHandler(new MyServerChannelInitializer());
             //调用它的bind操作监听端口号,调用同步阻塞方法sync等待绑定操作完成
             ChannelFuture f = b.bind(port).sync();
             //异步操作的通知回调

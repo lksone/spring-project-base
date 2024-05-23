@@ -29,7 +29,7 @@ import java.nio.charset.StandardCharsets;
 public class BufferDemo {
 
     public static void log(ByteBuffer buffer){
-        log.info("\u001B[34m" +"position:[{}],limit:[{}],remaining:[{}],capacity:[{}]",buffer.position(),buffer.limit(),buffer.remaining(),buffer.capacity()+ "\u001B[0m");
+       // log.info("\u001B[34m" +"position:[{}],limit:[{}],remaining:[{}],capacity:[{}]",buffer.position(),buffer.limit(),buffer.remaining(),buffer.capacity()+ "\u001B[0m");
         log.info("\u001B[34m" +"mode:{}",(buffer.isReadOnly()?"读模式":"写模式")+"\u001B[0m");
     }
 

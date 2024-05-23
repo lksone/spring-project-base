@@ -1,6 +1,5 @@
 package com.lks.netty.day003.nio.client;
 
-import com.lks.netty.day003.nio.proto.Person;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.protobuf.ProtobufDecoder;
@@ -31,7 +30,7 @@ public class MyClientChannelInitializer extends ChannelInitializer<SocketChannel
 
         //protobuf 处理
         ch.pipeline().addLast(new ProtobufVarint32FrameDecoder());
-        ch.pipeline().addLast(new ProtobufDecoder(Person.getDefaultInstance()));
+        //ch.pipeline().addLast(new ProtobufDecoder(Person.getDefaultInstance()));
         ch.pipeline().addLast(new ProtobufVarint32LengthFieldPrepender());
         ch.pipeline().addLast(new ProtobufEncoder());
         ch.pipeline().addLast(new MyClientHandler());

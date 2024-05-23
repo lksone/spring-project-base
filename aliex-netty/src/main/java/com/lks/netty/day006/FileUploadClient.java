@@ -51,7 +51,7 @@ public class FileUploadClient {
         }
         try {
             FileUploadFile uploadFile = new FileUploadFile();
-            File file = new File("D:/aaa.doc");
+            File file = new File("D:/8a53e0db1d9369aecfc6eb3b134420d0.docx");
             // 文件名
             String fileMd5 = file.getName();
             uploadFile.setFile(file);

@@ -2,9 +2,11 @@ package com.lks.netty.day006;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
 import java.io.RandomAccessFile;
+import java.nio.channels.FileChannel;
 
 /**
  * @author lks
@@ -12,6 +14,7 @@ import java.io.RandomAccessFile;
  * @e-mail 1056224715@qq.com
  * @date 2023/9/17 22:53
  */
+@Slf4j
 public class FileUploadServerHandler extends ChannelInboundHandlerAdapter {
 
     private int byteRead;
@@ -33,6 +36,7 @@ public class FileUploadServerHandler extends ChannelInboundHandlerAdapter {
                 file.createNewFile();
             }
             RandomAccessFile randomAccessFile = new RandomAccessFile(file, "rw");
+            FileChannel channel = randomAccessFile.getChannel();
             randomAccessFile.seek(start);
             randomAccessFile.write(bytes);
             start = start + byteRead;
@@ -55,6 +59,7 @@ public class FileUploadServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         cause.printStackTrace();
+        log.error("");
         ctx.close();
     }
 }

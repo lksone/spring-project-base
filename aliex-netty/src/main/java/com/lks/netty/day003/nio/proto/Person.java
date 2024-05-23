@@ -1,22 +1,27 @@
+/*
 package com.lks.netty.day003.nio.proto;
 
 import com.google.protobuf.*;
 
 
+*/
 /**
  * @author lks
  * @description todo
  * @e-mail 1056224715@qq.com
  * @date 2023/8/15 17:17
- */
+ *//*
+
 public class Person extends GeneratedMessageV3 implements PersonOrBuilder{
 
     private static final long serialVersionUID = 0L;
 
-    /**
+    */
+/**
      * Use Person.newBuilder() to construct.
      * @param builder
-     */
+     *//*
+
     private Person(GeneratedMessageV3.Builder<?> builder) {
         super(builder);
     }
@@ -88,13 +93,15 @@ public class Person extends GeneratedMessageV3 implements PersonOrBuilder{
 
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
-    /**
+    */
+/**
      * <pre>
      * string 类型
      * </pre>
      *
      * <code>string name = 1;</code>
-     */
+     *//*
+
     @Override
     public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -108,13 +115,15 @@ public class Person extends GeneratedMessageV3 implements PersonOrBuilder{
             return s;
         }
     }
-    /**
+    */
+/**
      * <pre>
      * string 类型
      * </pre>
      *
      * <code>string name = 1;</code>
-     */
+     *//*
+
     @Override
     public ByteString getNameBytes() {
         java.lang.Object ref = name_;
@@ -131,13 +140,15 @@ public class Person extends GeneratedMessageV3 implements PersonOrBuilder{
 
     public static final int AGE_FIELD_NUMBER = 2;
     private int age_;
-    /**
+    */
+/**
      * <pre>
      * int 类型
      * </pre>
      *
      * <code>int32 age = 2;</code>
-     */
+     *//*
+
     @Override
     public int getAge() {
         return age_;
@@ -318,9 +329,11 @@ public class Person extends GeneratedMessageV3 implements PersonOrBuilder{
         Builder builder = new Builder(parent);
         return builder;
     }
-    /**
+    */
+/**
      * Protobuf type {@code Person}
-     */
+     *//*
+
     public static final class Builder extends
             GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:Person)
@@ -475,13 +488,15 @@ public class Person extends GeneratedMessageV3 implements PersonOrBuilder{
         }
 
         private java.lang.Object name_ = "";
-        /**
+        */
+/**
          * <pre>
          * string 类型
          * </pre>
          *
          * <code>string name = 1;</code>
-         */
+         *//*
+
         @Override
         public java.lang.String getName() {
             java.lang.Object ref = name_;
@@ -495,13 +510,15 @@ public class Person extends GeneratedMessageV3 implements PersonOrBuilder{
                 return (java.lang.String) ref;
             }
         }
-        /**
+        */
+/**
          * <pre>
          * string 类型
          * </pre>
          *
          * <code>string name = 1;</code>
-         */
+         *//*
+
         @Override
         public ByteString getNameBytes() {
             java.lang.Object ref = name_;
@@ -515,13 +532,15 @@ public class Person extends GeneratedMessageV3 implements PersonOrBuilder{
                 return (ByteString) ref;
             }
         }
-        /**
+        */
+/**
          * <pre>
          * string 类型
          * </pre>
          *
          * <code>string name = 1;</code>
-         */
+         *//*
+
         public Builder setName(
                 java.lang.String value) {
             if (value == null) {
@@ -532,26 +551,30 @@ public class Person extends GeneratedMessageV3 implements PersonOrBuilder{
             onChanged();
             return this;
         }
-        /**
+        */
+/**
          * <pre>
          * string 类型
          * </pre>
          *
          * <code>string name = 1;</code>
-         */
+         *//*
+
         public Builder clearName() {
 
             name_ = getDefaultInstance().getName();
             onChanged();
             return this;
         }
-        /**
+        */
+/**
          * <pre>
          * string 类型
          * </pre>
          *
          * <code>string name = 1;</code>
-         */
+         *//*
+
         public Builder setNameBytes(
                 ByteString value) {
             if (value == null) {
@@ -565,37 +588,43 @@ public class Person extends GeneratedMessageV3 implements PersonOrBuilder{
         }
 
         private int age_ ;
-        /**
+        */
+/**
          * <pre>
          * int 类型
          * </pre>
          *
          * <code>int32 age = 2;</code>
-         */
+         *//*
+
         @Override
         public int getAge() {
             return age_;
         }
-        /**
+        */
+/**
          * <pre>
          * int 类型
          * </pre>
          *
          * <code>int32 age = 2;</code>
-         */
+         *//*
+
         public Builder setAge(int value) {
 
             age_ = value;
             onChanged();
             return this;
         }
-        /**
+        */
+/**
          * <pre>
          * int 类型
          * </pre>
          *
          * <code>int32 age = 2;</code>
-         */
+         *//*
+
         public Builder clearAge() {
 
             age_ = 0;
@@ -653,3 +682,4 @@ public class Person extends GeneratedMessageV3 implements PersonOrBuilder{
     }
 
 }
+*/

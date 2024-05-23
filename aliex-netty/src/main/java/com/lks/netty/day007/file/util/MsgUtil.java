@@ -50,7 +50,8 @@ public class MsgUtil {
         fileBurstInstruct.setReadPosition(readPosition);
 
         FileTransferProtocol fileTransferProtocol = new FileTransferProtocol();
-        fileTransferProtocol.setTransferType(Constants.TransferType.INSTRUCT); //0传输文件'请求'、1文件传输'指令'、2文件传输'数据'
+        //0传输文件'请求'、1文件传输'指令'、2文件传输'数据'
+        fileTransferProtocol.setTransferType(Constants.TransferType.INSTRUCT);
         fileTransferProtocol.setTransferObj(fileBurstInstruct);
 
         return fileTransferProtocol;
@@ -63,7 +64,8 @@ public class MsgUtil {
      */
     public static FileTransferProtocol buildTransferInstruct(FileBurstInstruct fileBurstInstruct) {
         FileTransferProtocol fileTransferProtocol = new FileTransferProtocol();
-        fileTransferProtocol.setTransferType(Constants.TransferType.INSTRUCT);  //0传输文件'请求'、1文件传输'指令'、2文件传输'数据'
+        //0传输文件'请求'、1文件传输'指令'、2文件传输'数据'
+        fileTransferProtocol.setTransferType(Constants.TransferType.INSTRUCT);
         fileTransferProtocol.setTransferObj(fileBurstInstruct);
         return fileTransferProtocol;
     }

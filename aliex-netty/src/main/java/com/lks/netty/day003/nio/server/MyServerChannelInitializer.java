@@ -1,3 +1,4 @@
+/*
 package com.lks.netty.day003.nio.server;
 
 import com.lks.netty.day003.nio.proto.Person;
@@ -8,12 +9,14 @@ import io.netty.handler.codec.protobuf.ProtobufEncoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 
+*/
 /**
  * @author lks
  * @description todo
  * @e-mail 1056224715@qq.com
  * @date 2023/8/15 17:48
- */
+ *//*
+
 public class MyServerChannelInitializer extends ChannelInitializer<SocketChannel> {
 
 
@@ -30,3 +33,4 @@ public class MyServerChannelInitializer extends ChannelInitializer<SocketChannel
         socketChannel.pipeline().addLast(new MyServerHandler());
     }
 }
+*/
