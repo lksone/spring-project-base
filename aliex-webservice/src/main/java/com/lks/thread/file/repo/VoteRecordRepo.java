@@ -24,6 +24,6 @@ public interface VoteRecordRepo extends JpaRepository<VoteRecord, Long> {
      *
      * @return
      */
-    @QueryHints(value = @QueryHint(name = HINT_FETCH_SIZE, value = "1000"))
-    Stream<VoteRecord> findByAll();
+    /*@QueryHints(value = @QueryHint(name = HINT_FETCH_SIZE, value = "1000"))
+    Stream<VoteRecord> findByAll();*/
 }

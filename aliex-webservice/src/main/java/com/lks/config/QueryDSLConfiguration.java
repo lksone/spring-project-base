@@ -7,7 +7,9 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.persistence.EntityManager;
 
-/*
+/**
+ * @author Administrator
+ */
 @Configuration
 public class QueryDSLConfiguration {
 
@@ -21,4 +23,3 @@ public class QueryDSLConfiguration {
         return new JPAQueryFactory(entityManager);
     }
 }
-*/

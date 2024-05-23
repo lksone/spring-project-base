@@ -39,7 +39,7 @@ public class FileDataServiceImpl implements FileDataService {
 
     @Override
     public void excelWrite() {
-        Stream<VoteRecord> byAll = voteRecordRepo.findByAll();
+        /*Stream<VoteRecord> byAll = voteRecordRepo.findByAll();
         List<VoteRecord> list = new LinkedList<>();
         AtomicInteger atomicInteger = new AtomicInteger(0);
         byAll.forEach(c -> {
@@ -51,6 +51,6 @@ public class FileDataServiceImpl implements FileDataService {
                 EasyExcel.write(name, VoteRecord.class).sheet(1).doWrite(list);
             }
             atomicInteger.addAndGet(1);
-        });
+        });*/
     }
 }

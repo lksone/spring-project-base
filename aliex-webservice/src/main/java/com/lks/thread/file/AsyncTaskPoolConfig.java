@@ -1,5 +1,7 @@
 package com.lks.thread.file;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
@@ -17,6 +19,9 @@ import java.util.concurrent.Executor;
 @EnableAsync
 public class AsyncTaskPoolConfig {
 
+
+    private static final Logger logger = LoggerFactory.getLogger(AsyncTaskPoolConfig.class);
+
     /**
      * 默认线程池
      *
@@ -25,7 +30,7 @@ public class AsyncTaskPoolConfig {
     @Bean("taskExecutor")
     public Executor taskExecutor() {
         int i = Runtime.getRuntime().availableProcessors();
-        System.out.println("系统最大线程数：" + i);
+        logger.info("系统最大线程数：" + i);
         ThreadPoolTaskExecutor taskExecutor = new ThreadPoolTaskExecutor();
         //核心线程数
         taskExecutor.setCorePoolSize(i);
