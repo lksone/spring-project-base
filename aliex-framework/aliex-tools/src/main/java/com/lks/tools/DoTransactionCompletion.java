@@ -4,7 +4,7 @@ import org.springframework.transaction.support.TransactionSynchronization;
 
 /**
  * @author lks
- * @description todo
+ * @description 集成事务数据异步执行
  * @e-mail 1056224715@qq.com
  * @date 2024/5/24 23:31
  */
