@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.lks</groupId>
         <artifactId>aliex-project-base</artifactId>
         <version>1.0.0</version>
     </parent>
 
-    <groupId>com.lks</groupId>
-    <artifactId>aliex-webservice</artifactId>
-    <version>1.0.0</version>
-    <packaging>war</packaging>
-    <modelVersion>4.0.0</modelVersion>
-
+    <artifactId>aliex-fileUpload</artifactId>
 
     <properties>
         <!-- Maven 相关 -->
@@ -203,23 +199,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!--流量控制-->
-      <!--  <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-            <version>2023.0.1.0</version>
-        </dependency>-->
-
-
-
     </dependencies>
-    <repositories>
-        <repository>
-            <id>AsposeJavaAPI</id>
-            <name>Aspose Java API</name>
-            <url>https://releases.aspose.com/java/repo/</url>
-        </repository>
-    </repositories>
-
 
 </project>

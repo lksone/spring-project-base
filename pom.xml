@@ -17,6 +17,7 @@
         <module>aliex-dependencies</module>
         <module>aliex-netty</module>
         <module>aliex-scheduler</module>
+        <module>aliex-fileUpload</module>
     </modules>
 
     <properties>
